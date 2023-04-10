@@ -1,0 +1,397 @@
+/* general */
+* {
+    box-sizing: border-box
+}
+
+body {
+    background: linear-gradient(to bottom, #daf5ff, #87ceeb, rgba(30, 144, 255, 0.9), #8acfeb);
+}
+
+#scroll-to-bottom {
+    position: absolute;
+    top: 250px;
+    right: -90px;
+    z-index: 9;
+    background-color: rgba(30, 144, 255, 0.95);
+    color: #eee;
+    padding: 10px 25px 20px 25px;
+    border-radius: 5px;
+    border: none;
+    outline: 2px outset #eee;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.5;
+    transform: rotate(270deg);
+    font-weight: bolder;
+    text-shadow: 1.5px 1.5px 1px #aaa;
+}
+
+h3 {
+    margin: 0px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.center {
+    text-align: center;
+    margin-top: 2%;
+}
+
+iframe {
+    border: none;
+}
+
+/* left column */
+/* weather from met office */
+#weather {
+    height: 780px;
+    width: 100%;
+    background-color: white;
+}
+
+/* Guardian News */
+.theguardian {
+    background-color: darkblue;
+    margin: 20px 0 20px;
+    padding: 0 12px 0 8px;
+}
+
+.g-logo {
+    text-align: left;
+    padding: 5px 0 0 20px;
+}
+
+.tablink {
+    font-family: 'Tiro Devanagari Hindi', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 1.5% 0;
+    height: auto;
+    width: 200px;
+}
+
+.tablink a {
+    text-decoration: none;
+}
+
+.news-container {
+    position: relative;
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    height: 10%;
+    opacity: 0.3;
+    border-radius: 50%;
+    padding: 0 9px;
+}
+
+.scrollLeft {
+    left: 0;
+}
+
+.scrollRight {
+    right: 0;
+}
+
+#uk-container,
+#world-container {
+    height: 300px;
+}
+
+#uk-news-content,
+#world-news-content {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-left: 3px;
+}
+
+.card {
+    flex: 0 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 10px 2px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    height: 280px;
+    overflow: auto;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin: 0;
+}
+
+#uk-container .card-title a,
+#world-container .card-title a {
+    text-decoration: none;
+}
+
+/* right column */
+#top-right img {
+    width: 50px;
+}
+
+#date {
+    vertical-align: bottom;
+    margin-left: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px #fff, 2px 2px 1px #ddd;
+}
+
+/* merseyrail */
+#rail {
+    height: 445px;
+    width: 100%;
+    vertical-align: top;
+}
+
+/* transportation links */
+.transport-link {
+    background-color: rgb(255, 255, 239);
+    padding: 2%;
+    margin-bottom: 25px;
+    vertical-align: top;
+}
+
+.link {
+    width: auto;
+    height: 40px;
+}
+
+.transport-link a {
+    text-decoration: none;
+    padding: 3%;
+}
+
+/* To-do List */
+.header h2 {
+    display: inline;
+    font-weight: bold;
+    text-shadow: 0.8px 0.8px #eee, 2px 2px 1px #aaa;
+}
+
+h2+span {
+    font-size: 34px;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 30px 12px 30px;
+    background: #eee;
+    font-size: 1.1rem;
+    transition: 0.2s;
+    word-wrap: break-word;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+ul li:hover {
+    background: #ddd;
+}
+
+ul li.checked {
+    background: black;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 15px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/* Style the close button */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Style the header */
+.header {
+    background-color: rgb(252, 231, 0);
+    padding: 35px 40px;
+    color: black;
+    text-align: center;
+}
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the input */
+input {
+    margin: 5px 0 0 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+    margin: 5px 0 0 0;
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.addBtn:hover {
+    background-color: #bbb;
+}
+
+/* show fixed navbar on small screen */
+.fixed-navbar {
+    background-color: rgb(255, 255, 239);
+    padding: 1%;
+    position: fixed;
+    bottom: 0;
+}
+
+.fixed-navbar div {
+    padding: 2%;
+}
+
+.fixed-navbar img {
+    margin: 2% 0;
+}
+
+.fixed-navbar a {
+    text-decoration: none;
+    padding: 2%;
+}
+
+/* media queries */
+
+@media all and (max-width:1200px) and (min-width:992px),
+(max-width:800px) {
+    /* hide news scroll buttons */
+    button.scroll-button {
+        display: none;
+    }
+}
+
+
+@media all and (max-width:992px),
+(min-width:1800px) {
+    /* hide scroll button (to page bottom) */
+    #scroll-to-bottom {
+        display: none;
+    }
+}
+
+@media all and (max-width:992px) {
+    #rail {
+        margin-bottom: 20px;
+    }
+
+    #top-right,
+    .transport-link,
+    h3,
+    .col-lg-4 br {
+        display: none;
+    }
+
+    /* gap between to-do list and navbar */
+    ul {
+        margin: 0 0 150px 0;
+    }
+}
+
+
+@media all and (min-width:992px) {
+    /* hide fixed navbar on large screen */
+    .fixed-navbar {
+        display: none;
+    }
+}
+
+@media all and (max-width:576px) {
+    .theguardian {
+        padding: 0 0 0 12px;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 480px) {
+    /* news */
+    .tablink {
+        font-size: 1.1rem;
+        width: 175px;
+    }
+
+    /*to-do list  */
+    .header {
+        padding: 35px 20px;
+    }
+    
+    /* small bee on to-do list */
+    h2+span {
+        font-size: 25px;
+    }
+
+    ul li.checked::before {
+        top: 20px;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 260px) {
+    /* gap between to-do list and navbar */
+    ul {
+        margin: 0 0 200px 0;
+    }
+}
