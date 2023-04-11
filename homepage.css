@@ -378,6 +378,11 @@ input {
         width: 175px;
     }
 
+    #uk-container,
+    #world-container {
+        height: 340px;
+    }
+    
     .card {
         height: 320px;
     }
